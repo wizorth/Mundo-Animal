@@ -16,7 +16,7 @@ interface BusinessInfo {
 const BusinessCard: React.FC<BusinessInfo> = ({ imgSrc, title, description, services, schedule, locations,facebook,whatsapp,tiktok }) => {
   return (
     <div className="w-full p-4 flex flex-wrap rounded-lg space-y-4 flex-col grow ">
-      <h5 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-4 ">{title}</h5>
+      <h5 className="text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-4 ">{title}</h5>
       <div className="flex flex-wrap">
         {/* Imagen */}
         <div className="max-w-md ">
@@ -31,10 +31,10 @@ const BusinessCard: React.FC<BusinessInfo> = ({ imgSrc, title, description, serv
         {/* Contenido */}
         <div className="p-8 ">
           
-          <p className="font-normal text-gray-900 dark:text-black mb-6">{description}</p>
+          <p className="text-xl font-normal text-gray-900 dark:text-black mb-6">{description}</p>
           <div className="font-normal text-gray-900 dark:text-black mb-6">
-            <strong>Servicios:</strong>
-            <ul className="list-disc list-inside">
+            <strong className="text-3xl">Servicios:</strong>
+            <ul className="list-disc list-inside text-xl">
               {services.map((service, index) => (
                 <li key={index}>{service}</li>
               ))}
@@ -45,9 +45,11 @@ const BusinessCard: React.FC<BusinessInfo> = ({ imgSrc, title, description, serv
           </div>
         <div className="">
           <p className="font-normal text-gray-900 dark:text-black-400 mb-4">
-            <strong>Horario:</strong> {schedule}
+            <strong className="text-3xl">Horario:</strong>
+             <p className="whitespace-pre-line text-xl">{schedule}
+             </p>
           </p>
-          <p className="text-2xl font-bold tracking-tight text-gray-900 dark:text-black mb-4 ">Contactar</p>
+          <p className="text-3xl font-bold tracking-tight text-gray-900 dark:text-black mb-4 ">Contactar</p>
           <div className="flex space-x-4 p-4">
       <SocialButton 
         href={facebook}
@@ -73,10 +75,10 @@ const BusinessCard: React.FC<BusinessInfo> = ({ imgSrc, title, description, serv
         </div>
         
         </div>  
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap justify-center">
               {/* Múltiples ubicaciones */}
           {locations.map((location, index) => (
-            <div key={index} className=" p-2 m-2 flex flex-wrap grow justify-center md:max-w-xl rounded-lg shadow-lg bg-[rgba(98,107,83,0.5)]">
+            <div key={index} className=" p-6 m-2 flex flex-wrap grow justify-center md:max-w-xl rounded-lg shadow-lg bg-[rgba(98,107,83,0.5)]">
               <p className="font-normal text-gray-900 dark:text-black text-2xl">
                 <strong>
                   {index === 0 ? "Central" : `Sucursal ${index}`}:
@@ -88,7 +90,7 @@ const BusinessCard: React.FC<BusinessInfo> = ({ imgSrc, title, description, serv
                 className=" md:h-72 rounded-lg mb-2"
                 style={{
                   aspectRatio: "16 / 9", // Mantiene la proporción
-                              // Elimina bordes adicionales
+                  pointerEvents: "auto"
                 }}
                 allowFullScreen
                 loading="lazy"
