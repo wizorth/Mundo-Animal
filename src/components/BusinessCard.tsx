@@ -5,7 +5,7 @@ interface BusinessInfo {
   imgSrc: string;
   title: string;
   description: string;
-  services: string[];
+  services: {name:string,sticker:string}[];
   schedule: string;
   facebook: string;
   whatsapp: string;
@@ -34,11 +34,20 @@ const BusinessCard: React.FC<BusinessInfo> = ({ imgSrc, title, description, serv
           <p className="text-xl font-normal text-gray-900 dark:text-black mb-6">{description}</p>
           <div className="font-normal text-gray-900 dark:text-black mb-6">
             <strong className="text-3xl">Servicios:</strong>
-            <ul className="list-disc list-inside text-xl">
-              {services.map((service, index) => (
-                <li key={index}>{service}</li>
-              ))}
-            </ul>
+            <ul className="space-y-3">
+        {services.map((service, index) => (
+          <li key={index} className="flex items-center gap-3">
+          {service.sticker && (
+            <img 
+              src={service.sticker} 
+              alt={`Sticker ${service.name}`}
+              className="w-20 h-20 object-contain hover:scale-110 transition-transform"
+            />
+          )}
+          <span className="font-medium text-xl">{service.name}</span>
+        </li>
+        ))}
+      </ul>
 
           </div>
           

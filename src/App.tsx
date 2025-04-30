@@ -88,7 +88,32 @@ const App: React.FC = () => {
         whatsapp='https://wa.me/59172880392'
         title="Veterinaria"
         description="Cuidamos la salud de tus mascotas con amor y profesionalismo."
-        services={["Consulta general", "Vacunaciónes y desparacitaciones", "Cirugía en general","Medicina interna","Farmacia veterinaria","Tratamiento de enfermedades en general"]}
+        services={[
+          {
+            name: "Consulta general",
+            sticker: "/stickers/consulta.png" // Ruta a tu sticker generado por IA
+          },
+          {
+            name: "Vacunaciónes y desparacitaciones",
+            sticker: "/stickers/vacunas.png"
+          },
+          {
+            name: "Cirugía en general",
+            sticker: "/stickers/cirugia.png"
+          },
+          {
+            name: "Medicina interna",
+            sticker: "/stickers/medicina.png"
+          },
+          {
+            name: "Farmacia veterinaria",
+            sticker: "/stickers/farmacia.png"
+          },
+          {
+            name: "Tratamiento de enfermedades en general",
+            sticker: "/stickers/tratamiento.png"
+          }
+        ]}
         schedule="Lunes a Sábado: 8:00am a 12:30pm - 2:30pm a 7:00pm"
         locations={[
          {
