@@ -91,7 +91,7 @@ const App: React.FC = () => {
         services={[
           {
             name: "Consulta general",
-            sticker: "/stickers/consulta.png" // Ruta a tu sticker generado por IA
+            sticker: "/stickers/consulta.png" 
           },
           {
             name: "Vacunaciónes y desparacitaciones",
@@ -137,7 +137,7 @@ const App: React.FC = () => {
         tiktok='https://www.tiktok.com/@supermercadodemascotas?lang=es'
         whatsapp='https://wa.me/59172880392'
         description="Deja que tu mascota luzca hermosa con nuestros servicios de grooming."
-        services={["Baños medicados y de belleza", "Baño con agua atemperada", "Cortes de exposición","Cortes de pelo segun la raza","Corte de uñas","Limpieza de oidos","Lavado de dientes","drenado de glandulas anales","Aplicación de perfume"]}
+        services={[{name:"Baños medicados y de belleza",sticker:"/stickers/BañoMedicadoBelleza.png"},{ name:"Baño con agua atemperada",sticker:"/stickers/BañoAtemperado.png"},{name:"Cortes de exposición",sticker:"/stickers/CortesExposicion.png"},{name:"Cortes de pelo segun la raza",sticker:"/stickers/CortesSegunRaza.png"},{name:"Corte de uñas",sticker:"/stickers/CortesUñas.png"},{name:"Limpieza de oidos",sticker:"/stickers/LimpiezaOido.png"},{name:"Lavado de dientes",sticker:"/stickers/LavadoDientes.png"},{name:"Drenado de glandulas anales",sticker:"/stickers/Drenado.png"},{name:"Aplicación de perfume",sticker:"/stickers/ApliPerfume.png"}]}
         schedule={`Lunes a Sábado: 8:00am a 5:00pm\nDomingos: 9:00am a 2:00pm`}
         locations={[
           {
@@ -161,7 +161,23 @@ const App: React.FC = () => {
         tiktok='https://www.tiktok.com/@supermercadodemascotas?lang=es'
         whatsapp='https://wa.me/59172880392'
         description="Todo lo que tu mascota necesita, lo encuentras aquí."
-        services={["Alimentos", "Juguetes", "Todo tipo de ropa","Accesorios"]}
+        services={[
+          {
+            name: "Alimentos",
+            sticker: "/stickers/alimento.png" 
+          },
+          {
+            name: "Juguetes",
+            sticker: "/stickers/juguetes.png"
+          },
+          {
+            name: "Todo tipo/estilo de ropa",
+            sticker: "/stickers/ropa.png"
+          },
+          {
+            name: "Accesorios",
+            sticker: "/stickers/accesorios.png"
+          },]}
         schedule={`Lunes a Sábado: 8:00am a 9:00pm\nDomingos: 9:00am a 7:00pm`}
         locations={[
           {

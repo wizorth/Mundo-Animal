@@ -41,7 +41,7 @@ const BusinessCard: React.FC<BusinessInfo> = ({ imgSrc, title, description, serv
             <img 
               src={service.sticker} 
               alt={`Sticker ${service.name}`}
-              className="w-20 h-20 object-contain hover:scale-110 transition-transform"
+              className="w-20 h-20 object-contain hover:scale-150 transition-transform"
             />
           )}
           <span className="font-medium text-xl">{service.name}</span>
